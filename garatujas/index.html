@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Termos Técnicos</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+  <aside>
+    <div class="branding">
+      <span class="material-symbols-outlined">
+        emoji_nature
+      </span>
+      <h1>Termos Técnicos</h1>
+    </div>
+    <nav>
+      <a href="#">
+        <span class="material-symbols-outlined">
+          search
+        </span>
+        Buscar termo
+      </a>
+      <a href="#">
+        <span class="material-symbols-outlined">
+          add
+        </span>
+        Adicionar termo
+      </a>
+    </nav>
+  </aside>
+
+  <main>
+    <h2>Buscar termo</h2>
+    <div class="search-bar">
+      <input type="text" placeholder="Digite o termo técnico que deseja buscar...">
+      <button>
+        <span class="material-symbols-outlined">
+          search
+        </span>
+        Buscar
+      </button>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Termo</th>
+          <th>Siglas</th>
+          <th>Definição</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>API</td>
+          <td>Application Programming Interface</td>
+          <td>Conjunto de rotinas e padrões estabelecidos por um software para utilização de suas funcionalidades por
+            aplicativos externos.</td>
+          <td>
+            <button class="material-symbols-outlined">
+              edit
+            </button>
+            <button class="material-symbols-outlined">
+              delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <script>
+    const el = document.querySelector('tbody tr');
+    let i = 100
+    while (i--) {
+      el.insertAdjacentHTML('afterend', el.outerHTML);
+    }
+  </script>
+</body>
+
+</html>
